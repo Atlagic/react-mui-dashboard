@@ -13,20 +13,24 @@ import Functions from "./pages/Functions/Functions.jsx";
 import Hosting from "./pages/Hosting/Hosting.jsx";
 import MachineLearning from "./pages/MachineLearning/MachineLearning.jsx";
 import Storage from "./pages/Storage/Storage.jsx";
+import { ThemeProvider } from "@mui/material/styles";
+import { dashboardTheme } from "./dashboardTheme.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<App />} >
-                <Route path="authentication" element={<Authentication />} />
-                <Route path="database" element={<Database />} />
-                <Route path="functions" element={<Functions />} />
-                <Route path="hosting" element={<Hosting />} />
-                <Route path="machine-learning" element={<MachineLearning />} />
-                <Route path="storage" element={<Storage />} />
-            </Route>
-        </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={dashboardTheme}>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<App />} >
+                    <Route path="authentication" element={<Authentication />} />
+                    <Route path="database" element={<Database />} />
+                    <Route path="functions" element={<Functions />} />
+                    <Route path="hosting" element={<Hosting />} />
+                    <Route path="machine-learning" element={<MachineLearning />} />
+                    <Route path="storage" element={<Storage />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    </ThemeProvider>
 )
 
 // If you want to start measuring performance in your app, pass a function

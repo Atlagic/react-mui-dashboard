@@ -24,7 +24,7 @@ const Navbar = () => {
             <List>
                 {mainNavbarItems.map((item, index) => (
                     <ListItem
-                        button
+                        component="button"
                         key={item.id}
                         onClick={() => navigate(item.route)}
                     >
