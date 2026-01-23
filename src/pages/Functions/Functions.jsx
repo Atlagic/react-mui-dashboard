@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 
 const Functions = () => {
     return (
-        <Grid item xs={8} md={2}>
+        <Grid size={{xs:8}}>
             This is functions page.
         </Grid>
     )
