@@ -8,10 +8,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { mainNavbarItems } from './consts/navbarItems';
 import { navbarStyles } from './styles';
-import { useParams, useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     return (
         <Drawer

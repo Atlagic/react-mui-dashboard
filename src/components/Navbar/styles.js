@@ -2,6 +2,10 @@ export const navbarStyles = {
     drawer: {
         width: 320,
         flexShrink: 0,
+        '& .MuiListItem-root': {
+            backgroundColor: 'transparent',
+            border: 'none'
+        },
         '& .MuiDrawer-paper': {
             width: 320,
             boxSizing: 'border-box',
@@ -17,6 +21,7 @@ export const navbarStyles = {
         marginLeft: '20px',
     },
     text: {
+        color: '#fff',
         '& span': {
             marginLeft: '-10px',
             fontWeight: '600',

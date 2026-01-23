@@ -1,42 +1,28 @@
 import React from 'react'
 import Grid from '@mui/material/Grid'
 import CommonButton from "../../components/common/CommonButton/CommonButton.jsx";
+import NotificationBell from "../../components/common/NotificationBell/NotificationBell.jsx";
+import BasicMenu from "../../components/common/BasicMenu/BasicMenu.jsx";
+import Avatar from "@mui/material/Avatar";
 
 const Authentication = () => {
-    const buttonStyles = {
-        fontWeight: 600,
-        fontSize: '0.875rem',
-        textTransform: 'capitalize',
-        borderRadius: 2.5,
+    const [open, setOpen] = React.useState(false)
+    const [anchorEl, setAnchorEl] = React.useState(null)
 
-        '&.MuiButton-contained': {
-            backgroundColor: '#009be5',
-            '&:hover': {
-                backgroundColor: '#006db3',
-            },
-        },
+    const handleOpen = (event) => {
+        setAnchorEl(event.currentTarget)
+    }
 
-        '&.MuiButton-outlined': {
-            color: '#fff',
-            borderColor: '#fff',
-            '&:hover': {
-                backgroundColor: 'transparent',
-            },
-        },
+    const handleClose = () => {
+        setOpen(false)
     }
 
     return (
-        <Grid item xs={8} md={2} styles={{backgroundColor: '009be5'}}>
+        <Grid item xs={8} md={2} >
             This is authenticaion page.
-            <CommonButton variant="contained" size="large" sx={buttonStyles} >
-                Add user
-            </CommonButton>
-            <CommonButton variant="outlined" size="large" sx={buttonStyles} >
-                Web setup
-            </CommonButton>
-            <CommonButton variant='contained' color="primary">
-                Primary
-            </CommonButton>
+            <CommonButton variant="default">Go to docs</CommonButton>
+            <NotificationBell iconColor="primary" badgeContent={4} anchorEl={anchorEl} onClick={handleOpen} />
+            <Avatar src="https://mui.com/static/images/avatar/1.jpg" />
         </Grid>
     )
 }
