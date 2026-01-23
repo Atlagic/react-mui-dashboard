@@ -22,7 +22,7 @@ const Header = ({ title }) => {
                 <NotificationBell
                     iconColor="white"
                 />
-                <Avatar src="https://mui.com/static/images/avatar/1.jpg" />
+                <Avatar src="https://mui.com/static/images/avatar/2.jpg" />
             </Box>
             <Box sx={headerStyles.middleRow}>
                 <Typography
